@@ -39,14 +39,12 @@ const PostList = () => {
 
     return (
     <div>
-
-    { loading ? <Loader/> : 
-    
     <InfiniteScroll id="post-list" 
     dataLength={posts.length} 
     next={fetchNextPage} 
     hasMore={nextPage?true:false} 
-    loader={<Loader/>}>
+    style={{overflow:"none"}}
+    >
     
     {posts.map((post)=>{
         return <Post key={post.id} 
@@ -61,7 +59,7 @@ const PostList = () => {
         />
     })}
 
-    </InfiniteScroll>}
+    </InfiniteScroll>
 
     </div>
     )

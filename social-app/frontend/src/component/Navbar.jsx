@@ -29,10 +29,7 @@ const Navbar = () => {
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
     </button>
-
-
     <div className="collapse navbar-collapse" id="navbarNavDropdown" >
-
     <div className="ms-auto" style={{width:"75%"}}>
     <form onSubmit={formik.handleSubmit} className="d-flex" id="search__box" style={{borderRadius:"30px"}}>
     <input className="form-control me-2" name="query" type="search" placeholder="search posts" aria-label="Search" style={{borderRadius:"30px",background:"#f0f5fa"}}

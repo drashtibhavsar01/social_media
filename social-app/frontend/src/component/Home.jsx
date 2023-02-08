@@ -14,12 +14,12 @@ const Home = () => {
     return(
         <section>
         <Navbar />
-        <div className="container" id="main__container">
+        <div className="homeContainer" id="main__container">
         <div className="row">
         <div className="col-md-3">
         <Sidebar />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-5">
         <CreatePost avatar={avatar} />
         <PostList/>
         </div>

@@ -6,9 +6,9 @@ import {UserContext} from '../../context/UserContext'
 import {createPost} from './actions';
 import FormData from 'form-data';
 import {useNavigate} from 'react-router-dom'
-import "./share.css";
+import "./chat.css";
 // post create bar
-const CreatePost = (props) => {
+const Chat = (props) => {
     const [caption,setCaption] = useState('');
     const [image,setImage] = useState({preview:null,raw:null});
     const [loading,setLoading] = useState(false);
@@ -48,10 +48,7 @@ const CreatePost = (props) => {
         <div className="create">
         <div className="create__post">
         <img src={props.avatar ? props.avatar : UserImage} alt="avtar" className="img-fluid me-auto" style={{width:"2.7em",height:"2.7em",borderRadius:"50%"}} />
-        <textarea className="form-control" placeholder="Create Post" id="create__input" onChange={e=>setCaption(e.target.value)} />
-        <label htmlFor="upload__image">
-        <img src={UploadImage} alt="upload" style={{height:"2em",width:"2em",marginLeft:"0.3em"}} />
-        </label>
+        <textarea className="form-control" placeholder="Write message" id="create__input" onChange={e=>setCaption(e.target.value)} />
         <input type="file" accept="image/*" id="upload__image"  style={{display:"none"}} onChange={handleImageUpload} />
         </div>
            { image.preview &&  
@@ -72,4 +69,4 @@ const CreatePost = (props) => {
     )
 }
 
-export default CreatePost;
+export default Chat;

@@ -4,6 +4,7 @@ import Home from './component/Home';
 import PostDetail from './component/post/Detail';
 import Page404 from './component/Page404';
 import Profile from './component/user/Profile';
+import Chat from './component/chat/Chat';
 import UserDetail from './component/user/UserDetail';
 import Signup from './component/auth/Signup';
 import Login from './component/auth/Login';
@@ -23,6 +24,7 @@ function App() {
     <Route path="post/:postId" element={<PostDetail />} />
     <Route path="post/edit/:postId" element={<EditPost />} />
     <Route path="profile/" element={<Profile/>} />
+    <Route path="/" element={<Chat/>} />
     {/* search route with optional parameter  */}
     <Route path="search/" element={<Search/>}> 
       <Route path=":query" element={<Search/>}/>
